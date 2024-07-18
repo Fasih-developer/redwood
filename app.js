@@ -115,9 +115,3 @@ gsap.from('.page-3-main', {
     ease:'power1.inOut',
     duration:1,
 });
-
-let main = document.querySelector('main');
-
-window.addEventListener('load', function(){
-    main.style.display = 'inline-block';
-})
