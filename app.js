@@ -66,43 +66,52 @@ tl
     duration:1,
 })
 // -------------------------------scroll---------------------------
-
-gsap.from('.page-2 h2', {
-    scrollTrigger:{
-        trigger: ".hero",
-        start:'-500% center',
-        end:'-430% center',
-        // markers:true,
-        scrub:1,
-    },   
-    opacity:0,
-    ease:'power1.inOut',
-    duration:1,
+function page2(){
+    gsap.from('.page-2 h2', {
+        scrollTrigger:{
+            trigger: ".hero",
+            start:'-500% center',
+            end:'-430% center',
+            // markers:true,
+            scrub:1,
+        },   
+        opacity:0,
+        ease:'power1.inOut',
+        duration:1,
+    });
+    gsap.from('.page-2 h1', {
+        scrollTrigger:{
+            trigger: ".hero",
+            start:'-500% center',
+            end:'-430% center',
+            // markers:true,
+            scrub:1,
+        },   
+        opacity:0,
+        ease:'power1.inOut',
+        duration:1,
+    })
+    gsap.from('.page-2 p', {
+        scrollTrigger:{
+            trigger: ".hero",
+            start:'-420% center',
+            end:'-350% center',
+            // markers:true,
+            scrub:1,
+        },   
+        opacity:0,
+        ease:'power1.inOut',
+        duration:1,
+    })
+}
+ScrollTrigger.matchMedia({
+    "(min-width: 741px)": function() {
+        page2();
+    },
+    "(max-width: 740px)": function() {
+    }
 });
-gsap.from('.page-2 h1', {
-    scrollTrigger:{
-        trigger: ".hero",
-        start:'-500% center',
-        end:'-430% center',
-        // markers:true,
-        scrub:1,
-    },   
-    opacity:0,
-    ease:'power1.inOut',
-    duration:1,
-})
-gsap.from('.page-2 p', {
-    scrollTrigger:{
-        trigger: ".hero",
-        start:'-420% center',
-        end:'-350% center',
-        // markers:true,
-        scrub:1,
-    },   
-    opacity:0,
-    ease:'power1.inOut',
-    duration:1,
-})
+
 gsap.from('.page-3-main', {
     scrollTrigger:{
         trigger: ".hero",
